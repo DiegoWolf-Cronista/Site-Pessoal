@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Grid</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cabeçalho da Página</h1>
+        </header>
+        
+        <aside>
+            <section>Menu</section>
+        </aside>
+
+        <main class="cont_principal">
+            <section>Conteúdo Principal</section>
+        </main>
+
+        <section class="publicidade">
+            <section>Publicidade</section>
+        </section>
+
+        <footer>
+            <h2>Rodapé</h2>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    height: 100vh; /* Ocupa a altura toda da tela */
+    grid-template-columns: 1fr 2fr 1fr; /* Menu e Publicidade menores que o Centro */
+    grid-template-rows: auto 1fr auto; /* Header e Footer ajustam ao conteúdo, meio expande */
+    grid-template-areas: 
+        "cabecalho cabecalho cabecalho"
+        "menu conteudo publicidade"
+        "rodape rodape rodape";
+}
+
+/* Estilos de Posicionamento (Lógica Grid) */
+header {
+    grid-area: cabecalho;
+}
+
+aside {
+    grid-area: menu;
+}
+
+main.cont_principal {
+    grid-area: conteudo;
+}
+
+.publicidade {
+    grid-area: publicidade;
+}
+
+footer {
+    grid-area: rodape;
+}
+
+/* Estilos Visuais (Baseados no seu Flex original) */
+header, footer, aside, main, .publicidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc; /* Apenas para visualização */
+}
+
+header, footer {
+    padding: 20px;
+}
