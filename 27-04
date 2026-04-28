@@ -84,3 +84,56 @@ header, footer, aside, main, .publicidade {
 header, footer {
     padding: 20px;
 }
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Grid</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore delectus consequatur est. Sint earum hic, magni eveniet, dolores tempora, modi rerum laudantium ab velit facilis! Fugit facere voluptate vitae expedita?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolores at veniam temporibus ad cum soluta dolor, qui hic excepturi, fugit placeat ullam ipsum aperiam fugiat assumenda eum. Molestias, laudantium.</p>
+    <button>X</button>
+
+    <div>
+        <img src="https://i.ytimg.com/vi/_9K0MrP925s/maxresdefault.jpg" alt="">
+        <p class="paragrafo">Texto sobre a imagem</p>
+    </div>
+
+    
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    position: fixed; 
+    top: 10px;       
+    right: 10px;     
+    z-index: 1000;  
+}
+
+div{
+    position: relative;
+}
+
+.paragrafo{
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+
+
